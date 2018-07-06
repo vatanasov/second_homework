@@ -10,7 +10,7 @@ defmodule Homework do
     {age,sex} = {32, "f"}
    
     # Create a patter, that will fail if the first item of the tuple is anything other than "200"
-  {_,y,z} = {200, "example data", :an_atom}
+  {200_,_} = {200, "example data", :an_atom}
 
     # From here on, do not use variables. All of these are heavily inspired by elixirkoans
     true = true
@@ -20,7 +20,7 @@ defmodule Homework do
     6 = 2 * 3
     3 > 2
     "hello world" = "hello " <> "world"
-    list = [1, 2] ++ [:a, "b"]
-    list1 = [1, 2, 3] -- [3]
+    [1,2,:a, "b"] = [1, 2] ++ [:a, "b"]
+    [1,2] = [1, 2, 3] -- [3]
   end
 end
